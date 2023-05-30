@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class AppDemoHerencia {
 
     public static void main(String[] args) {
+        int numerador = 0;
         ArrayList<Smartphone> listaDeSmartphones;
         ArrayList<Television> listaDeTVs;
         listaDeSmartphones = new ArrayList<>();
@@ -20,9 +21,14 @@ public class AppDemoHerencia {
         listaDeTVs.add(new Television());
         listaDeTVs.add(new Television());
         for(Smartphone celular:listaDeSmartphones){
+            numerador += 1;
+            System.out.println("Smartphone "+numerador+":");
             System.out.println(celular);
         }
+        numerador = 0;
         for(Television television:listaDeTVs){
+            numerador += 1;
+            System.out.println("Television "+numerador+":");
             System.out.println(television);
         }
     }

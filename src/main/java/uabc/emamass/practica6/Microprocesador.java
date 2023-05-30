@@ -32,4 +32,9 @@ public class Microprocesador extends ComponenteElectronico {
     public float cambiarCosto() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    @Override
+    public String toString(){
+        return "Cache RAM: "+Microprocesador.cacheRAM+"\nVelocidad Hz: "+Microprocesador.velocidadHz;
+    }
 }

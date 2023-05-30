@@ -8,24 +8,52 @@ package uabc.emamass.practica6;
  *
  * @author poppe
  */
-public abstract class Computadora extends DispositivoElectronico{
+public class Computadora extends DispositivoElectronico{
     //Texto de la practica dice extiende desde DispositivoElectronico
     //Pero imagen tiene la flecha de herencia hacia DeConsumo
-    protected Microprocesador CPU;
-    protected long ramMB;
+    protected static Microprocesador CPU;
+    protected static long ramMB;
     
     public Computadora(){
-        this.CPU = new Microprocesador();
-        this.ramMB = 16000;
+        Computadora.CPU = new Microprocesador();
+        Computadora.ramMB = 16000;
     }
     
     public Computadora(Microprocesador CPU, long ramMB){
-        this.CPU = CPU;
-        this.ramMB = ramMB;
+        Computadora.CPU = CPU;
+        Computadora.ramMB = ramMB;
     }
     
-    public abstract void getCPU();
-    public abstract void setCPU();
-    public abstract void setRamMB();
-    public abstract void getRamMB();
+    public Microprocesador getCPU(){
+        return CPU; 
+    }
+    public void setCPU(Microprocesador CPU){
+        Computadora.CPU = CPU;
+    }
+    public void setRamMB(long ramMB){
+        Computadora.ramMB = ramMB;
+    }
+    public long getRamMB(){
+        return ramMB;
+    }
+    
+    @Override
+    public String toString(){
+        return "Microprocesador: "+Computadora.CPU+"\nRam MB: "+Computadora.ramMB;
+    }
+
+    @Override
+    public void agregarComponente(ComponenteElectronico componente) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public void quitarComponente(ComponenteElectronico componente) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public float cambiarCosto() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

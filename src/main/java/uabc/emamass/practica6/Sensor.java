@@ -33,4 +33,9 @@ public class Sensor extends ComponenteElectronico{
     public float cambiarCosto() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    @Override
+    public String toString(){
+        return "Tipo: "+Sensor.tipo+"\nUnidad de Medida: "+Sensor.unidadDeMedida+"\nValor: "+Sensor.valor+"\nComponente Electronico: "+ComponenteElectronico.esParteDe;
+    }
 }

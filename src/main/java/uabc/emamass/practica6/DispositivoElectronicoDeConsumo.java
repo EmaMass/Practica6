@@ -9,15 +9,15 @@ package uabc.emamass.practica6;
  * @author poppe
  */
 public abstract class DispositivoElectronicoDeConsumo extends DispositivoElectronico {
-    protected boolean encendido;
+    protected static boolean encendido;
     
     
     public DispositivoElectronicoDeConsumo(){
-        this.encendido = false;
+        DispositivoElectronicoDeConsumo.encendido = false;
     }
     
     public DispositivoElectronicoDeConsumo(boolean encendido){
-        this.encendido = encendido; 
+        DispositivoElectronicoDeConsumo.encendido = encendido; 
     }
     
     public void encender(){
@@ -30,5 +30,10 @@ public abstract class DispositivoElectronicoDeConsumo extends DispositivoElectro
     
     public boolean isEncendido(){
         return encendido;
+    }
+    
+    @Override 
+    public String toString(){
+        return "Encendido? : "+DispositivoElectronicoDeConsumo.encendido;
     }
 }

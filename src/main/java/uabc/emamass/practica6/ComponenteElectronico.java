@@ -41,4 +41,9 @@ public abstract class ComponenteElectronico extends DispositivoElectronico {
         esParteDe = dispositivo; 
     }
     
+    @Override
+    public String toString(){
+        return "Es parte de: "+ComponenteElectronico.esParteDe;
+    }
+    
 }

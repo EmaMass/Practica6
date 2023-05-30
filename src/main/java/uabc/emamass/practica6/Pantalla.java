@@ -31,4 +31,9 @@ public class Pantalla extends ComponenteElectronico {
     public float cambiarCosto() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+    
+    @Override
+    public String toString(){
+        return "Resolucion X: "+Pantalla.resolucionX+"\nResolucion Y: "+Pantalla.resolucionY+"\nComponente Electronico: "+ComponenteElectronico.esParteDe;
+    }
 }

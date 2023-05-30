@@ -16,26 +16,6 @@ public class Smartphone extends Computadora{
         Smartphone.sensorDeHuella = new Sensor();
         Smartphone.pantalla = new Pantalla();
     }
-    
-    @Override
-    public void getCPU() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void setCPU() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void setRamMB() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void getRamMB() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     @Override
     public void agregarComponente(ComponenteElectronico componente) {
@@ -50,5 +30,10 @@ public class Smartphone extends Computadora{
     @Override
     public float cambiarCosto() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    @Override
+    public String toString(){
+        return "Sensor de Huella: "+Smartphone.sensorDeHuella+"\nPantalla: "+Smartphone.pantalla; 
     }
 }

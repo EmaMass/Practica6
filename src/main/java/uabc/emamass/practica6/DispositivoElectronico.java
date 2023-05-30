@@ -38,27 +38,36 @@ public abstract class DispositivoElectronico {
     public abstract void quitarComponente(ComponenteElectronico componente);
     public abstract float cambiarCosto();
     
-    public float getCosto(){
+    public static float getCosto(){
         return costo; 
     }
     
-    public ArrayList<ComponenteElectronico> getComponentes(){
+    public static ArrayList<ComponenteElectronico> getComponentes(){
         return componentes;
     }
     
-    public String getFabricante(){
+    public static String getFabricante(){
         return fabricante;
     }
     
-    public String getNumeroSerie(){
+    public static String getNumeroSerie(){
         return numeroSerie;
     }
     
-    public String getMarca(){
+    public static String getMarca(){
         return marca;
     }
     
-    public String getNombre(){
+    public static String getNombre(){
         return nombre;
+    }
+    
+    @Override
+    public String toString(){
+        String cadena = "";
+        for (int i = 0; i < DispositivoElectronico.componentes.size(); i++){
+            cadena += DispositivoElectronico.componentes.get(i);
+        }
+        return "Fabricante: "+DispositivoElectronico.fabricante+"\nNumero Serie: "+DispositivoElectronico.numeroSerie+"\nMarca: "+DispositivoElectronico.marca+"\nNombre: "+DispositivoElectronico.nombre+"\nCosto: "+DispositivoElectronico.costo+"\nComponentes: "+cadena;
     }
 }
