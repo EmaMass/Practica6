@@ -44,6 +44,7 @@ public class IUSmartphone extends Canvas{
         }
     }
     
+    @Override
     public void paint(Graphics g){
         g.drawImage(image,posX,posY,width,height,this);
     }
@@ -52,9 +53,11 @@ public class IUSmartphone extends Canvas{
         this.canvas = canvas;
         MiMouseAdapter mouse = new MiMouseAdapter(canvas, smartphone, height, width, posX, posY);
         canvas.addMouseListener(mouse);
+        
         Frame frame = new Frame();
         frame.setSize(1000,1000);
         frame.add(canvas);
         frame.setVisible(true);
+        
     }
 }

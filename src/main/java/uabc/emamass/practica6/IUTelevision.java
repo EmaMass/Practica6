@@ -48,7 +48,7 @@ public class IUTelevision extends Canvas {
     }
     
     public void paint(Graphics g){
-        g.drawImage(image,posX,posY,width,height,this);
+        g.drawImage(image,posX,posY,width,height,null);
     }
     
     public void imprimirTelevision(Canvas canvas){
